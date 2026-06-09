@@ -1,0 +1,136 @@
+:root {
+    --bg: #171717;
+    --surface: #242424;
+    --surface-hover: #2d2d2d;
+    --text: #e5e5e5;
+    --text-muted: #a3a3a3;
+    --accent: #b68d40;
+    --accent-dark: #8f6d2f;
+    --border: #3a3a3a;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #f5f5f5;
+        --surface: #ffffff;
+        --surface-hover: #f0f0f0;
+        --text: #1a1a1a;
+        --text-muted: #666;
+        --accent: #9d6c17;
+        --accent-dark: #7b5310;
+        --border: #d8d8d8;
+    }
+}
+
+body {
+    font-family: Tahoma, Georgia, serif;
+    max-width: 2100px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: end;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 180px;
+}
+
+label {
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-left: 0.25rem;
+}
+
+select {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+select:focus {
+    outline: 2px solid var(--accent);
+    border-color: var(--accent);
+}
+
+button {
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.potionGrid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.resultCard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem;
+}
+
+.resultCard h1 {
+    font-size: 1.4rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.resultCard h2 {
+    font-size: 1rem;
+    margin-top: 1.25rem;
+    color: var(--text);
+}
+
+.ingredientList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.ingredient {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.9rem;
+}

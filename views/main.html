@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Morrowind Potion Helper</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body>
+    {{if .Warning}}
+    <div class="potionGrid">{{.Warning}}</div>
+    {{end}}
+
+    <form id="potionForm" method="get">
+        <div>
+            <label for="I1">Effect 1:</label>
+            <select id="I1" name="I1">
+                {{range .Selections}}
+                <option value="{{.Value}}" {{if eq .SelectedBy 1}}selected{{end}}>{{.Value}}
+                </option>
+                {{end}}
+            </select>
+
+        </div>
+        <div>
+            <label for="I2">Effect 2:</label>
+            <select id="I2" name="I2">
+                {{range .Selections}}
+                <option value="{{.Value}}" {{if eq .SelectedBy 2}}selected{{end}}>{{.Value}}
+                </option>
+                {{end}}
+            </select>
+        </div>
+        <div>
+            <label for="I3">Effect 3:</label>
+            <select id="I3" name="I3">
+                {{range .Selections}}
+                <option value="{{.Value}}" {{if eq .SelectedBy 3}}selected{{end}}>{{.Value}}
+                </option>
+                {{end}}
+            </select>
+        </div>
+        <div>
+            <label for="I4">Effect 4:</label>
+            <select id="I4" name="I4">
+                {{range .Selections}}
+                <option value="{{.Value}}" {{if eq .SelectedBy 4}}selected{{end}}>{{.Value}}
+                </option>
+                {{end}}
+            </select>
+        </div>
+        <button type="submit">Search</button>
+    </form>
+    <div id="res" class="potionGrid">
+        {{if .Output}}
+        {{.Output}}
+        {{end}}
+    </div>
+</body>
+
+</html>

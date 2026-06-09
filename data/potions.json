@@ -1,0 +1,539 @@
+{
+    "Select an Effect": [
+        "Data gathered from https://en.uesp.net/wiki/Morrowind:Alchemy_Effects"
+    ],
+    "Blind": [
+        "Durzog Meat",
+        "Bristleback Leather"
+    ],
+    "Burden": [
+        "Adamantium Ore",
+        "Gold Kanet",
+        "Resin",
+        "Scrib Jerky"
+    ],
+    "Cure Blight Disease": [
+        "Ash Salts",
+        "Meteor Slime",
+        "Scrib Jelly"
+    ],
+    "Cure Common Disease": [
+        "Chokeweed",
+        "Daedra Skin",
+        "Gravedust",
+        "Green Lichen",
+        "Muck",
+        "Red Lichen",
+        "Willow Anther"
+    ],
+    "Cure Paralyzation": [
+        "Corkbulb Root",
+        "Netch Leather",
+        "Scamp Skin",
+        "Willow Anther"
+    ],
+    "Cure Poison": [
+        "Black Lichen",
+        "Ghoul Heart",
+        "Meteor Slime",
+        "Rat Meat",
+        "Raw Ebony",
+        "Roobrush",
+        "Scathecraw",
+        "Scrib Jelly"
+    ],
+    "Damage Health": [
+        "Meadow Rye",
+        "Nirthfly Stalks",
+        "Noble Sedge Flowers",
+        "Scrib Cabbage"
+    ],
+    "Detect Animal": [
+        "Alit Hide",
+        "Ampoule Pod",
+        "Bloat",
+        "Ectoplasm",
+        "Horker Tusk"
+    ],
+    "Detect Enchantment": [
+        "Hound Meat",
+        "Hypha Facia",
+        "Lloramor Spines",
+        "Marshmerrow"
+    ],
+    "Detect Key": [
+        "Ash Yam",
+        "Diamond",
+        "Muck",
+        "Spore Pod"
+    ],
+    "Dispel": [
+        "Bungler's Bane",
+        "Pearl",
+        "Moon Sugar",
+        "Timsa-Come-By flowers"
+    ],
+    "Drain Agility": [
+        "Ash Salts",
+        "Black Anther",
+        "Daedra's Heart",
+        "Diamond",
+        "Emerald",
+        "Hypha Facia",
+        "Pearl",
+        "Raw Ebony",
+        "Ruby"
+    ],
+    "Drain Endurance": [
+        "Bittergreen Petals",
+        "Black Anther",
+        "Bungler's Bane",
+        "Emerald",
+        "Moon Sugar",
+        "Void Salts",
+        "Wolfsbane Petals"
+    ],
+    "Drain Fatigue": [
+        "Bear Pelt",
+        "Bonemeal",
+        "Comberry",
+        "Corprus Weepings",
+        "Guar Hide",
+        "Hypha Facia",
+        "Kagouti Hide",
+        "Kwama Cuttle",
+        "Large Corprusmeat Hunk",
+        "Large Wrapped Corprusmeat",
+        "Luminous Russula",
+        "Marshmerrow",
+        "Medium Corprusmeat Hunk",
+        "Medium Wrapped Corprusmeat",
+        "Shalk Resin",
+        "Small Corprusmeat Hunk",
+        "Small Wrapped Corprusmeat",
+        "Snow Bear Pelt",
+        "Snow Wolf Pelt",
+        "Spore Pod",
+        "Violet Coprinus",
+        "Wolf Pelt",
+        "Wrapped Corprusmeat Hunk"
+    ],
+    "Drain Health": [
+        "Coda Flower",
+        "Ectoplasm",
+        "Fire Petal",
+        "Fire Salts",
+        "Gold Kanet",
+        "Gravetar",
+        "Green Lichen",
+        "Horn Lily Bulb",
+        "Large Corprusmeat Hunk",
+        "Large Wrapped Corprusmeat",
+        "Medium Corprusmeat Hunk",
+        "Medium Wrapped Corprusmeat",
+        "Roobrush",
+        "Ruby",
+        "Scathecraw",
+        "Scrap Metal",
+        "Small Corprusmeat Hunk",
+        "Small Wrapped Corprusmeat",
+        "Wrapped Corprusmeat Hunk"
+    ],
+    "Drain Intelligence": [
+        "Alit Hide",
+        "Coda Flower",
+        "Gravedust",
+        "Human Flesh",
+        "Muck",
+        "Raw Glass",
+        "Scrib Cabbage"
+    ],
+    "Drain Luck": [
+        "Chokeweed",
+        "Dreugh Wax",
+        "Gold Kanet",
+        "Gravetar",
+        "Hypha Facia",
+        "Moon Sugar",
+        "Stoneflower Petals"
+    ],
+    "Drain Magicka": [
+        "Belladonna Berries",
+        "Bittergreen Petals",
+        "Bloat",
+        "Golden Sedge Flowers",
+        "Grahl Eyeball",
+        "Gravedust",
+        "Kresh Fiber",
+        "Large Corprusmeat Hunk",
+        "Large Wrapped Corprusmeat",
+        "Medium Corprusmeat Hunk",
+        "Medium Wrapped Corprusmeat",
+        "Rat Meat",
+        "Red Lichen",
+        "Scamp Skin",
+        "Small Corprusmeat Hunk",
+        "Small Wrapped Corprusmeat",
+        "Timsa-Come-By flowers",
+        "Trama Root",
+        "Wolfsbane Petals",
+        "Wrapped Corprusmeat Hunk"
+    ],
+    "Drain Personality": [
+        "Bonemeal",
+        "Coda Flower",
+        "Heather",
+        "Human Flesh",
+        "Muck",
+        "Netch Leather",
+        "Scales",
+        "Shalk Resin",
+        "Sload Soap",
+        "Willow Anther"
+    ],
+    "Drain Speed": [
+        "Black Lichen",
+        "Bungler's Bane",
+        "Frost Salts",
+        "Heather",
+        "Kresh Fiber",
+        "Meadow Rye",
+        "Nirthfly Stalks",
+        "Raw Glass",
+        "Red Lichen",
+        "Trama Root"
+    ],
+    "Drain Strength": [
+        "Black Lichen",
+        "Bungler's Bane",
+        "Ectoplasm",
+        "Green Lichen",
+        "Heartwood",
+        "Raw Glass",
+        "Saltrice",
+        "Scathecraw",
+        "Spore Pod"
+    ],
+    "Drain Willpower": [
+        "Ampoule Pod",
+        "Chokeweed",
+        "Corprus Weepings",
+        "Dreugh Wax",
+        "Marshmerrow",
+        "Racer Plumes",
+        "Roobrush"
+    ],
+    "Feather": [
+        "Heather",
+        "Ruby",
+        "Scuttle"
+    ],
+    "Fire Shield": [
+        "Comberry",
+        "Fire Salts",
+        "Raw Glass",
+        "Sload Soap"
+    ],
+    "Fortify Agility": [
+        "Durzog Meat",
+        "Ectoplasm",
+        "Fire Salts",
+        "Heartwood",
+        "Noble Sedge Flowers",
+        "Roobrush",
+        "Scrib Cabbage",
+        "Sload Soap"
+    ],
+    "Fortify Attack": [
+        "Ghoul Heart",
+        "Golden Sedge Flowers"
+    ],
+    "Fortify Endurance": [
+        "Daedra's Heart",
+        "Guar Hide",
+        "Netch Leather"
+    ],
+    "Fortify Fatigue": [
+        "Gravetar",
+        "Hound Meat",
+        "Scrib Jerky",
+        "Scuttle"
+    ],
+    "Fortify Health": [
+        "Human Flesh",
+        "Large Kwama Egg",
+        "Shalk Resin",
+        "Vampire Dust"
+    ],
+    "Fortify Intelligence": [
+        "Ash Yam",
+        "Bloat",
+        "Horker Tusk",
+        "Netch Leather"
+    ],
+    "Fortify Luck": [
+        "Corkbulb Root",
+        "Corprus Weepings",
+        "Guar Hide"
+    ],
+    "Fortify Magicka": [
+        "Belladonna Berries",
+        "Emerald",
+        "Saltrice",
+        "Stoneflower Petals"
+    ],
+    "Fortify Personality": [
+        "Green Lichen",
+        "Kresh Fiber",
+        "Stoneflower Petals"
+    ],
+    "Fortify Speed": [
+        "Kagouti Hide",
+        "Meadow Rye",
+        "Moon Sugar",
+        "Nirthfly Stalks",
+        "Shalk Resin",
+        "Snow Bear Pelt",
+        "Snow Wolf Pelt",
+        "Wolf Pelt"
+    ],
+    "Fortify Strength": [
+        "Ash Yam",
+        "Bear Pelt",
+        "Daedra Skin",
+        "Dreugh Wax",
+        "Durzog Meat",
+        "Golden Sedge Flowers",
+        "Grahl Eyeball",
+        "Vampire Dust"
+    ],
+    "Fortify Willpower": [
+        "Bloat",
+        "Meteor Slime",
+        "Scrib Jelly",
+        "Wickwheat"
+    ],
+    "Frost Damage": [
+        "Bristleback Leather",
+        "Holly Berries",
+        "Raw Stalhrim"
+    ],
+    "Frost Shield": [
+        "Frost Salts",
+        "Holly Berries",
+        "Large Kwama Egg",
+        "Raw Ebony",
+        "Willow Anther"
+    ],
+    "Invisibility": [
+        "Bittergreen Petals",
+        "Diamond",
+        "Lloramor Spines",
+        "Wolfsbane Petals"
+    ],
+    "Levitate": [
+        "Coda Flower",
+        "Racer Plumes",
+        "Sweetpulp",
+        "Trama Root"
+    ],
+    "Light": [
+        "Black Anther",
+        "Red Lichen"
+    ],
+    "Lightning Shield": [
+        "Corkbulb Root",
+        "Crab Meat",
+        "Scrap Metal"
+    ],
+    "Night Eye": [
+        "Bear Pelt",
+        "Grahl Eyeball",
+        "Kagouti Hide",
+        "Daedra's Heart",
+        "Snow Bear Pelt",
+        "Snow Wolf Pelt",
+        "Wolf Pelt"
+    ],
+    "Paralyze": [
+        "Ampoule Pod",
+        "Daedra Skin",
+        "Fire Petal",
+        "Ghoul Heart",
+        "Hackle-Lo Leaf",
+        "Large Kwama Egg",
+        "Rat Meat",
+        "Raw Stalhrim",
+        "Spore Pod",
+        "Sweetpulp",
+        "Void Salts",
+        "Wickwheat"
+    ],
+    "Poison": [
+        "Adamantium Ore",
+        "Lloramor Spines",
+        "Luminous Russula",
+        "Noble Sedge Flowers",
+        "Violet Coprinus"
+    ],
+    "Reflect": [
+        "Adamantium Ore",
+        "Comberry",
+        "Diamond",
+        "Hound Meat"
+    ],
+    "Resist Common Disease": [
+        "Ash Yam",
+        "Bear Pelt",
+        "Kagouti Hide",
+        "Pearl",
+        "Resin",
+        "Snow Bear Pelt",
+        "Snow Wolf Pelt",
+        "Wolf Pelt"
+    ],
+    "Resist Fire": [
+        "Black Anther",
+        "Fire Petal",
+        "Frost Salts"
+    ],
+    "Resist Frost": [
+        "Black Lichen",
+        "Bristleback Leather",
+        "Fire Salts",
+        "Grahl Eyeball",
+        "Gravetar",
+        "Holly Berries",
+        "Raw Stalhrim"
+    ],
+    "Resist Magicka": [
+        "Ash Salts",
+        "Belladonna Berries"
+    ],
+    "Resist Paralysis": [
+        "Horn Lily Bulb",
+        "Timsa-Come-By flowers",
+        "Sweetpulp"
+    ],
+    "Resist Poison": [
+        "Alit Hide",
+        "Kwama Cuttle",
+        "Rat Meat"
+    ],
+    "Resist Shock": [
+        "Crab Meat",
+        "Scrap Metal"
+    ],
+    "Restore Agility": [
+        "Bonemeal",
+        "Noble Sedge Flowers",
+        "Scrib Cabbage",
+        "Sload Soap"
+    ],
+    "Restore Endurance": [
+        "Gravedust",
+        "Horn Lily Bulb",
+        "Timsa-Come-By flowers",
+        "Scales"
+    ],
+    "Restore Fatigue": [
+        "Bread",
+        "Chokeweed",
+        "Crab Meat",
+        "Hackle-Lo Leaf",
+        "Hound Meat",
+        "Large Kwama Egg",
+        "Saltrice",
+        "Scrib Jerky",
+        "Scuttle",
+        "Small Kwama Egg"
+    ],
+    "Restore Health": [
+        "Corkbulb Root",
+        "Corprus Weepings",
+        "Emerald",
+        "Marshmerrow",
+        "Raw Stalhrim",
+        "Resin",
+        "Saltrice",
+        "Sweetpulp",
+        "Wickwheat"
+    ],
+    "Restore Intelligence": [
+        "Bittergreen Petals",
+        "Ruby",
+        "Scrap Metal",
+        "Wolfsbane Petals"
+    ],
+    "Restore Luck": [
+        "Crab Meat",
+        "Hackle-Lo Leaf",
+        "Kresh Fiber"
+    ],
+    "Restore Magicka": [
+        "Adamantium Ore",
+        "Belladonna Berries",
+        "Comberry",
+        "Daedra's Heart",
+        "Frost Salts",
+        "Heartwood",
+        "Void Salts"
+    ],
+    "Restore Personality": [
+        "Guar Hide",
+        "Heather",
+        "Scamp Skin"
+    ],
+    "Restore Speed": [
+        "Meadow Rye",
+        "Nirthfly Stalks",
+        "Raw Ebony",
+        "Resin"
+    ],
+    "Restore Strength": [
+        "Dreugh Wax",
+        "Gold Kanet",
+        "Horn Lily Bulb",
+        "Scamp Skin",
+        "Stoneflower Petals"
+    ],
+    "Restore Willpower": [
+        "Meteor Slime",
+        "Scathecraw",
+        "Scrib Jelly",
+        "Trama Root"
+    ],
+    "Spell Absorption": [
+        "Fire Petal",
+        "Lloramor Spines",
+        "Vampire Dust",
+        "Void Salts"
+    ],
+    "Swift Swim": [
+        "Daedra Skin",
+        "Golden Sedge Flowers",
+        "Scales",
+        "Scrib Jerky"
+    ],
+    "Telekinesis": [
+        "Alit Hide",
+        "Bonemeal",
+        "Scuttle"
+    ],
+    "Water Breathing": [
+        "Hackle-Lo Leaf",
+        "Kwama Cuttle",
+        "Luminous Russula",
+        "Pearl"
+    ],
+    "Water Walking": [
+        "Ampoule Pod",
+        "Kwama Cuttle",
+        "Scales",
+        "Violet Coprinus"
+    ],
+    "Weakness to Fire": [
+        "Heartwood",
+        "Holly Berries"
+    ]
+}
