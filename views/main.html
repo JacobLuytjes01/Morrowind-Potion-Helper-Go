@@ -10,54 +10,66 @@
 
 <body>
     {{if .Warning}}
-    <div class="potionGrid">{{.Warning}}</div>
+    <div class="warning" role="alert">{{.Warning}}</div>
     {{end}}
 
     <form id="potionForm" method="get">
-        <div>
-            <label for="I1">Effect 1:</label>
-            <select id="I1" name="I1">
-                {{range .Selections}}
-                <option value="{{.Value}}" {{if eq .SelectedBy 1}}selected{{end}}>{{.Value}}
-                </option>
-                {{end}}
-            </select>
-
+        <div id="effectSelectors" class="effectSelectors">
+            {{range .Selectors}}
+            {{$selector := .}}
+            <div class="effectSelector">
+                <label for="{{$selector.ID}}">Effect {{$selector.Number}}:</label>
+                <select id="{{$selector.ID}}" name="{{$selector.ID}}">
+                    {{range $.Effects}}
+                    <option value="{{.}}" {{if eq . $selector.Selected}}selected{{end}}>{{.}}</option>
+                    {{end}}
+                </select>
+            </div>
+            {{end}}
         </div>
-        <div>
-            <label for="I2">Effect 2:</label>
-            <select id="I2" name="I2">
-                {{range .Selections}}
-                <option value="{{.Value}}" {{if eq .SelectedBy 2}}selected{{end}}>{{.Value}}
-                </option>
-                {{end}}
-            </select>
+        <div id="buttonBox" class="buttonBox">
+            <button type="submit">Search</button>
+            <button type="button" id="add" aria-label="Add effect selector">+</button>
+            <button type="button" id="subtract" aria-label="Remove effect selector">−</button>
         </div>
-        <div>
-            <label for="I3">Effect 3:</label>
-            <select id="I3" name="I3">
-                {{range .Selections}}
-                <option value="{{.Value}}" {{if eq .SelectedBy 3}}selected{{end}}>{{.Value}}
-                </option>
-                {{end}}
-            </select>
-        </div>
-        <div>
-            <label for="I4">Effect 4:</label>
-            <select id="I4" name="I4">
-                {{range .Selections}}
-                <option value="{{.Value}}" {{if eq .SelectedBy 4}}selected{{end}}>{{.Value}}
-                </option>
-                {{end}}
-            </select>
-        </div>
-        <button type="submit">Search</button>
     </form>
     <div id="res" class="potionGrid">
         {{if .Output}}
         {{.Output}}
         {{end}}
     </div>
+    <template id="effectSelectorTemplate">
+        <div class="effectSelector">
+            <label></label>
+            <select>
+                {{range .Effects}}
+                <option value="{{.}}">{{.}}</option>
+                {{end}}
+            </select>
+        </div>
+    </template>
+    <script>
+        const selectors = document.getElementById("effectSelectors");
+        const selectorTemplate = document.getElementById("effectSelectorTemplate");
+
+        function addSelector() {
+            const number = selectors.children.length + 1;
+            const fragment = selectorTemplate.content.cloneNode(true);
+            const label = fragment.querySelector("label");
+            const select = fragment.querySelector("select");
+            const id = `I${number}`;
+            label.htmlFor = id;
+            label.textContent = `Effect ${number}:`;
+            select.id = id;
+            select.name = id;
+            selectors.appendChild(fragment);
+        }
+
+        document.getElementById("add").addEventListener("click", addSelector);
+        document.getElementById("subtract").addEventListener("click", () => {
+            if (selectors.children.length > 1) selectors.lastElementChild.remove();
+        });
+    </script>
 </body>
 
 </html>

@@ -5,32 +5,35 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 	"sort"
 	"strconv"
 	"strings"
 )
 
-type selection struct {
-	Value      string
-	SelectedBy int
+type selector struct {
+	ID       string
+	Number   int
+	Selected string
 }
 
 type outputData struct {
-	Selections []selection
-	Output     template.HTML
-	Warning    string
+	Effects   []string
+	Selectors []selector
+	Output    template.HTML
+	Warning   string
 }
 
 var potions map[string][]string
 
-func outputPotions(I1 string, I2 string, I3 string, I4 string) (template.HTML, string) {
+func outputPotions(values []string) (template.HTML, string) {
 	var input []string
 	var warning []string
 
-	for _, value := range []string{I1, I2, I3, I4} {
+	for _, value := range values {
 		value = strings.TrimSpace(value)
-		if value == "" {
+		if value == "" || value == "Select an Effect" {
 			continue
 		}
 		if _, ok := potions[value]; !ok {
@@ -49,10 +52,10 @@ func outputPotions(I1 string, I2 string, I3 string, I4 string) (template.HTML, s
 		return "", finalWarning
 	}
 
-	possibleItems := map[string]bool{}
+	possibleItems := make(map[string][]string)
 	for _, effect := range input {
 		for _, ingredient := range potions[effect] {
-			possibleItems[ingredient] = true
+			possibleItems[ingredient] = append(possibleItems[ingredient], effect)
 		}
 	}
 
@@ -68,15 +71,8 @@ func outputPotions(I1 string, I2 string, I3 string, I4 string) (template.HTML, s
 	sort.Strings(items)
 
 	for _, item := range items {
-		var key []string
-		level := len(input)
-		for _, effect := range input {
-			if contains(potions[effect], item) {
-				key = append(key, effect)
-				level--
-			}
-		}
-
+		key := possibleItems[item]
+		level := len(input) - len(key)
 		effects := strings.Join(key, " + ")
 		itemLevels[level][effects] = append(itemLevels[level][effects], item)
 	}
@@ -136,34 +132,55 @@ func contains(values []string, target string) bool {
 	return false
 }
 
-func buildSelections(I1 string, I2 string, I3 string, I4 string) []selection {
+func effectNames() []string {
 	var effects []string
 	for effect := range potions {
 		effects = append(effects, effect)
 	}
 	sort.Strings(effects)
+	return append([]string{"Select an Effect"}, effects...)
+}
 
-	selections := make([]selection, 0, len(effects))
-	for _, effect := range effects {
-		selectedBy := 0
-		switch effect {
-		case I1:
-			selectedBy = 1
-		case I2:
-			selectedBy = 2
-		case I3:
-			selectedBy = 3
-		case I4:
-			selectedBy = 4
-		}
-
-		selections = append(selections, selection{
-			Value:      effect,
-			SelectedBy: selectedBy,
-		})
+func requestedEffects(query url.Values) []string {
+	type numberedValue struct {
+		number int
+		value  string
 	}
 
-	return selections
+	var found []numberedValue
+	for key, values := range query {
+		if !strings.HasPrefix(key, "I") {
+			continue
+		}
+		number, err := strconv.Atoi(strings.TrimPrefix(key, "I"))
+		if err != nil || number < 1 {
+			continue
+		}
+		value := ""
+		if len(values) > 0 {
+			value = values[0]
+		}
+		found = append(found, numberedValue{number: number, value: value})
+	}
+
+	if len(found) == 0 {
+		return make([]string, 4)
+	}
+	sort.Slice(found, func(i, j int) bool { return found[i].number < found[j].number })
+
+	values := make([]string, len(found))
+	for i, entry := range found {
+		values[i] = entry.value
+	}
+	return values
+}
+
+func buildSelectors(values []string) []selector {
+	selectors := make([]selector, len(values))
+	for i, value := range values {
+		selectors[i] = selector{ID: "I" + strconv.Itoa(i+1), Number: i + 1, Selected: value}
+	}
+	return selectors
 }
 
 func main() {
@@ -181,13 +198,14 @@ func main() {
 	tmpl := template.Must(template.ParseFiles("views/main.html"))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		queryParams := r.URL.Query()
+		values := requestedEffects(r.URL.Query())
 
-		output, warning := outputPotions(queryParams.Get("I1"), queryParams.Get("I2"), queryParams.Get("I3"), queryParams.Get("I4"))
+		output, warning := outputPotions(values)
 		out := outputData{
-			Selections: buildSelections(queryParams.Get("I1"), queryParams.Get("I2"), queryParams.Get("I3"), queryParams.Get("I4")),
-			Output:  output,
-			Warning: warning,
+			Effects:   effectNames(),
+			Selectors: buildSelectors(values),
+			Output:    output,
+			Warning:   warning,
 		}
 		if err := tmpl.Execute(w, out); err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
